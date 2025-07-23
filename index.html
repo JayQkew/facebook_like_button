@@ -19,8 +19,9 @@
     h2 {
       margin-bottom: 20px;
     }
-    .fb-like {
-      margin-top: 10px;
+    iframe {
+      border: none;
+      overflow: hidden;
     }
   </style>
 </head>
@@ -28,36 +29,17 @@
 
   <h2>Like Huawei Mobile Services SA</h2>
 
-  <!-- Facebook SDK Root -->
-  <div id="fb-root"></div>
-
-  <!-- Facebook Like Button -->
-  <div class="fb-like"
-       data-href="https://www.facebook.com/HuaweiMobileServicesSA/"
-       data-width=""
-       data-layout="button_count"
-       data-action="like"
-       data-size="large"
-       data-share="false">
-  </div>
-
-  <!-- Load Facebook SDK -->
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: 'v18.0'
-      });
-    };
-
-    (function (d, s, id) {
-      if (d.getElementById(id)) return;
-      var js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk.js";
-      var fjs = d.getElementsByTagName(s)[0];
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
+  <!-- Facebook Like Button as iframe -->
+  <iframe
+    src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FHuaweiMobileServicesSA%2F&layout=button_count&action=like&size=large&share=false&width=150&height=35"
+    width="150"
+    height="35"
+    style="border:none;overflow:hidden"
+    scrolling="no"
+    frameborder="0"
+    allowfullscreen="true"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+  </iframe>
 
 </body>
 </html>
